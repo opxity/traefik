@@ -1,4 +1,10 @@
 certs:
 	@mkcert -install
 	@rm -rf ssl && mkdir ssl && cd ssl \
-	&& mkcert local.ridi.io '*.local.ridi.io'
+	&& mkcert weblinkcheck.io '*.weblinkcheck.io'
+
+up:
+	docker-compose up
+
+background:
+	docker-compose up -d

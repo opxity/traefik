@@ -26,7 +26,7 @@ services:
       - IP_ADDR
     command: [
       "--no-hosts",
-      "--address=/${ADDRESSES:-.local.ridi.io}/${IP_ADDR:-127.0.0.1}"
+      "--address=/${ADDRESSES:-.weblinkcheck.io}/${IP_ADDR:-127.0.0.1}"
     ]
   openssl:
     image: frapsoft/openssl
@@ -39,4 +39,4 @@ volumes:
   ssl:
 networks:
   default:
-    name: ${EXTERNAL_NETWORK:-ridi}
+    name: ${EXTERNAL_NETWORK:-weblinkcheck}
