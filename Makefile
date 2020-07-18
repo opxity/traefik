@@ -1,7 +1,7 @@
 certs:
 	@mkcert -install
 	@rm -rf ssl && mkdir ssl && cd ssl \
-	&& mkcert weblinkcheck.io '*.weblinkcheck.io'
+	&& mkcert opxity.io '*.opxity.io'
 
 up:
 	docker-compose up
