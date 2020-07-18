@@ -26,7 +26,7 @@ services:
       - IP_ADDR
     command: [
       "--no-hosts",
-      "--address=/${ADDRESSES:-.weblinkcheck.io}/${IP_ADDR:-127.0.0.1}"
+      "--address=/${ADDRESSES:-.opxity.io}/${IP_ADDR:-127.0.0.1}"
     ]
   openssl:
     image: frapsoft/openssl
@@ -39,4 +39,4 @@ volumes:
   ssl:
 networks:
   default:
-    name: ${EXTERNAL_NETWORK:-weblinkcheck}
+    name: ${EXTERNAL_NETWORK:-opxity}
